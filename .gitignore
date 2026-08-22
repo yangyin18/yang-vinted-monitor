@@ -1,0 +1,26 @@
+# ===== 密钥与真实凭证（仓库只保留 *.example.txt 模板）=====
+proxy_pool.txt
+clash_pool.txt
+proxy_pool_*.txt
+own_pool*.txt
+buyer_pool*.txt
+server_config.local.json
+
+# ===== 运行时数据 =====
+*.db
+*.db.bak
+accounts.txt.bak
+__pycache__/
+*.pyc
+
+# ===== 构建产物 / 二进制 =====
+dist/
+build/
+*.zip
+*.exe
+*.bin
+3proxy.bin
+
+# ===== 开发调试截图 =====
+*.png
+*.jpg

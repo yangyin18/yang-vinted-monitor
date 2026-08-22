@@ -1,0 +1,17 @@
+[Unit]
+Description=Vinted 多账号监控服务(内存缓存,零落盘)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/vinted-monitor
+# 必须固定 --workers 1:多 worker 会跑两个 Scheduler,重复抓取双倍封号风险
+ExecStart=/opt/vinted-monitor/venv/bin/python -m uvicorn server:app --host 0.0.0.0 --port 8000 --workers 1
+Restart=always
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,2 @@
+curl_cffi>=0.7.0   # 伪装 Chrome TLS 指纹,抗 Cloudflare 识别(推荐)
+requests>=2.31.0    # 兜底传输层(未装 curl_cffi 时使用)

@@ -1,0 +1,15 @@
+# 代理池模板 —— 复制成 proxy_pool.txt 后填你自己的代理。
+# 每行一个代理 URL(# 开头为注释、空行忽略)。
+# 服务器会每轮抓取换一个出口 IP,请求失败(403/网络错误)自动切下一个重试。
+#
+# 支持格式:
+#   http://user:pass@ip:port       HTTP 代理(带鉴权)
+#   socks5h://user:pass@ip:port    SOCKS5 代理(标准格式,curl/curl_cffi 直接认)
+#   direct                         这一轮走直连
+#   clash:节点名                   通过本地 Clash 切机场节点(仅本地脚本可用,服务器会自动过滤)
+#
+# 注意:数据中心 IP 在 Vinted 的 Cloudflare 前容易被 JS 挑战(403),
+# 多账号场景推荐用住宅代理池。
+http://your-user:your-pass@proxy1.example.com:8080
+socks5h://your-user:your-pass@proxy2.example.com:1080
+direct

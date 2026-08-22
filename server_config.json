@@ -1,0 +1,35 @@
+{
+  "host": "0.0.0.0",
+  "port": 8000,
+  "domain": "www.vinted.co.uk",
+  "mode": "manual",
+  "interval_minutes": 30,
+  "schedule": {"start": "02:00", "end": "13:00"},
+  "retention_days": 7,
+  "accounts_file": "accounts.txt",
+  "proxy_pool_file": "proxy_pool.example.txt",
+  "default_proxy": "",
+  "access_token_web": "",
+  "page_delay": [1.5, 3.5],
+  "between_accounts_delay": [0.2, 0.5],
+  "workers": 1,
+  "round_timeout": 360,
+  "pool_verify": {
+    "enabled": false,
+    "threads": 30,
+    "timeout": 8
+  },
+  "qingguo": {
+    "enabled": false,
+    "api": "https://overseas.proxy.qg.net/get",
+    "key": "YOUR_QINGGUO_KEY",
+    "pwd": "YOUR_QINGGUO_PWD",
+    "auth": "YOUR_QINGGUO_KEY:YOUR_QINGGUO_PWD",
+    "num": 200,
+    "keep_alive": 900,
+    "distinct": false,
+    "probe_timeout": 8,
+    "probe_max": 100,
+    "probe_workers": 20
+  }
+}

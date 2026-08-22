@@ -1,0 +1,13 @@
+# Clash 机场节点轮换池模板 —— 复制成 clash_pool.txt 后替换成你自己 Clash 里的节点名。
+# 用法:
+#   python monitor.py --proxy-pool clash_pool.txt
+#   或 CONFIG["proxy_pool"] 里填同样的行。
+#
+# 格式:每行一个 `clash:<节点名>` = 先切 Clash 节点,再走本地 7890 端口。
+# 每轮检查 / 请求失败重试时自动换下一个节点。
+# 需要本地 Clash 在运行,external-controller / secret 与 clash_pool.py 里配置一致。
+clash:🇯🇵 日本01
+clash:🇯🇵 日本02
+clash:🇭🇰 香港01
+clash:🇸🇬 新加坡01
+clash:🇺🇸 美国01
